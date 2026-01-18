@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', 'serif';
+    text-align: center;
+}
+
+header, 
+form {
+    margin-top: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.message-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f1de;
+    /* color: white; */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+    min-width: 500px;
+}
+
+#message {
+    text-align: left;
+}
+
+#person {
+    color: #e07a5f;
+    font-weight: bold;
+}
+
+.user-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 30px;
+    margin: auto;
+} */
+
+a {
+    text-decoration: none;
+    color: #ffba08;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.entries {
+    padding: 50px 20px;
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #edf2f4;
+    box-shadow: 5px 5px 10px 2px rgb(161, 160, 160)
+}
+
+.submit {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 20%;
+    background-color: #e07a5f;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease-out;
+}
+
+.submit:hover {
+    background-color: #eb6743;
+}
+
+.message-box:hover {
+    box-shadow: 0 0 10px 1px #b2d0f0
+}
+
+.submit:hover, 
+.message-box:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.input-field label {
+    width: 120px;           
+    text-align: left; 
+}
+
+input, textarea {
+    flex: 1;
+    max-width: 300px;    
+}
+
+input {
+    padding: 5px;
+}
