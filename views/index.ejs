@@ -1,18 +1,34 @@
 <html>
     <head>
         <title><%= title %></title>
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
-        <a href="new">New Message</a>
+        <header>
+            <h2>All Messsages</h2>
+            <a href="new" id="new">New Message</a>
+        </header>
 
-        <h2>All Messsages</h2>
-        <% messages.forEach(message => { %>
-            <div>
-                <%= message.text %>
-                <%= message.user %>
-                <%= message.added %>
-            </div>
-        <% }); %>
+        <div class="messages">
+            <% messages.forEach((message, idx) => { %>
+                <a href="/message/<%= idx %>" class="box-link">
+                    <div class="message-box">
+                        <div class="user-name">
+                            <p id="person"><%= message.user %></p>
+                            <p><%= message.added %></p>
+                        </div>
+                        
+                        <p id="message">
+                            <% if (message.text.length > 21) { %>
+                                <%= message.text.substring(0, 21) + '...' %>
+                            <% } else { %>
+                                <%= message.text %>
+                            <% } %>
+                        </p>
+                    </div>
+                </a>
+            <% }); %>
+        </div>
 
     </body>
 </html>

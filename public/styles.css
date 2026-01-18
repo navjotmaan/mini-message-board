@@ -38,7 +38,6 @@ header {
     flex-direction: column;
     padding: 20px;
     background-color: #f4f1de;
-    /* color: white; */
     border-radius: 20px;
     cursor: pointer;
     transition: transform 0.5s ease-out;
@@ -61,19 +60,18 @@ header {
     margin-bottom: 5px;
 }
 
-/* form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    gap: 30px;
-    margin: auto;
-} */
-
 a {
     text-decoration: none;
+}
+
+#new {
     color: #ffba08;
     font-weight: bold;
     font-size: 18px;
+}
+
+.box-link {
+    color: black;
 }
 
 .entries {
@@ -131,4 +129,18 @@ input, textarea {
 
 input {
     padding: 5px;
+}
+
+.message-detail {
+    margin: 100px auto;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px 1px #b7b7b7
+}
+
+#date {
+    color: rgb(103, 101, 101);
+    margin: 10px 0 20px 0;
 }
