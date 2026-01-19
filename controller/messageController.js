@@ -9,8 +9,8 @@ exports.postMessage = (req, res) => {
 
     messages.push({ 
         text: message, 
-        user: name, added: 
-        new Date().toLocaleString()
+        user: name, 
+        added: new Date().toLocaleString()
     });
 
     res.redirect('/');
