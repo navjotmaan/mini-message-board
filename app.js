@@ -19,9 +19,11 @@ app.use('/', indexRouter);
 app.use('/new', messageRouter);
 app.use('/message', detailRouter);
 
-app.listen(5050, (error) => {
+const PORT = process.env.PORT || 5050;
+
+app.listen(PORT, '0.0.0.0', (error) => {
     if (error) {
         throw error;
     }
-    console.log('listening to port 5050: ');
+    console.log(`Server is running on port ${PORT}`);
 });
