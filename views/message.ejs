@@ -6,8 +6,8 @@
 
     <body>
         <div class="message-detail">
-            <h3><%= message.user %></h3>
-            <p id="date"><%= message.added %></p>
+            <h3><%= message.username %></h3>
+            <p id="date"><%= message.added.toLocaleString() %></p>
             <p><%= message.text %></p>
         </div>
 
