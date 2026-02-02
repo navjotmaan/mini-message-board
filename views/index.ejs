@@ -10,12 +10,12 @@
         </header>
 
         <div class="messages">
-            <% messages.forEach((message, idx) => { %>
-                <a href="/message/<%= idx %>" class="box-link">
+            <% messages.forEach((message, id) => { %>
+                <a href="/message/<%= id %>" class="box-link">
                     <div class="message-box">
                         <div class="user-name">
-                            <p id="person"><%= message.user %></p>
-                            <p><%= message.added %></p>
+                            <p id="person"><%= message.username %></p>
+                            <p><%= message.added.toLocaleString() %></p>
                         </div>
                         
                         <p id="message">

@@ -1,5 +1,8 @@
-const messages = require('../data/messages');
+const db = require('../db/queries');
 
-exports.getIndex = (req, res) => {
+async function getMessages(req, res) {
+    const messages = await db.getAllMessages();
     res.render('index', { title: 'Mini Messageboard', messages });
-};
+}
+
+module.exports = { getMessages };
