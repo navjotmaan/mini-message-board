@@ -9,11 +9,12 @@ CREATE TABLE IF NOT EXISTS messages (
   added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO messages (username, text) 
+INSERT INTO messages (username, text, added) 
 VALUES
-  ('Amando', 'Hi there!'),
-  ('Jason', 'Hi! How are you? What are you doing today? Have you seen any new movie, drama or series? Have you read any new books?'),
-  ('Charles', 'Click me!');
+  ('Brendan', 'Today is a good day.', NOW()),
+  ('Amando', 'Hi there!', NOW()),
+  ('Jason', 'Hi! How are you? What are you doing today? Have you seen any new movie, drama or series? Have you read any new books?', NOW()),
+  ('Charles', 'Click me!', NOW());
 `;
 
 async function main() {
