@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (username, text, added) 
 VALUES
+  ('Navjot', 'This is a mini message board project. It uses Express, EJS, and PostgreSQL.', NOW()),
   ('Brendan', 'Today is a good day.', NOW()),
   ('Amando', 'Hi there!', NOW()),
   ('Jason', 'Hi! How are you? What are you doing today? Have you seen any new movie, drama or series? Have you read any new books?', NOW()),
