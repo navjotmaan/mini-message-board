@@ -20,13 +20,19 @@ VALUES
 
 async function main() {
   console.log("seeding...");
-  const client = new Client({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-  });
+  const connectionString = process.env.DATABASE_URL;
+
+  const client = new Client(
+    connectionString
+      ? { connectionString, ssl: { rejectUnauthorized: false } }
+      : {
+          user: process.env.DB_USER,
+          host: process.env.DB_HOST,
+          database: process.env.DB_DATABASE,
+          password: process.env.DB_PASSWORD,
+          port: process.env.DB_PORT,
+        }
+  );
 
   try {
     await client.connect();
